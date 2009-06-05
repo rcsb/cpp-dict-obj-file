@@ -1,1 +1,19 @@
 * text=auto !eol
+/Makefile -text
+bin/CreateDictObjFile.csh -text
+include/DictDataInfo.h -text
+include/DictObjCont.h -text
+include/DictObjContInfo.h -text
+include/DictObjFile.h -text
+include/DictParentChild.h -text
+src/DictDataInfo.C -text
+src/DictObjCont.C -text
+src/DictObjContInfo.C -text
+src/DictObjFile.C -text
+src/DictObjFileCreator.C -text
+src/DictObjFileReader.C -text
+src/DictObjFileSelectiveReader.C -text
+src/DictParentChild.C -text
+test/mmcif_std.odb -text
+test/mmcif_std.sdb -text
+test/test.sh -text
