@@ -106,18 +106,20 @@ class ObjContInfo
     std::pair<unsigned int, unsigned int> GetItemIndices(
       const std::string& catName, const std::string& itemName) const;
 
+#ifndef VLAD_PYTHON_GLUE
+    /**
+    **  Utility method, not part of users public API, and will soon be
+    **  removed.
+    */
+    virtual ~ObjContInfo();
+#endif
+
   protected:
     /**
     **  Utility method, not part of users public API, and will soon be
     **  removed.
     */
     ObjContInfo();
-
-    /**
-    **  Utility method, not part of users public API, and will soon be
-    **  removed.
-    */
-    virtual ~ObjContInfo();
 
   private:
     std::vector<Cat>::iterator currCat;
