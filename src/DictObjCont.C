@@ -15,7 +15,6 @@
 #include <algorithm>
 
 #include "ISTable.h"
-#include "DICParserBase.h"
 #include "DictObjContInfo.h"
 #include "DictObjCont.h"
 
