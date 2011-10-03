@@ -97,8 +97,7 @@ TARGETS = ${BASE_MAIN_FILES:.ext=}
 TARGET_SCRIPTS = CreateDictObjFile.csh
 
 # Test related files
-TEST_FILES = $(TEST_DIR)/mmcif_ddl.dic \
-             $(TEST_DIR)/mmcif_std.dic \
+TEST_FILES = $(TEST_DIR)/mmcif_std.sdb \
              $(TEST_DIR)/test.sh
 
 ALL_OBJ_FILES = *.o
