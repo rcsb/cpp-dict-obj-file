@@ -455,9 +455,14 @@ DictObjCont::~DictObjCont()
 {
     for (unsigned int itemI = 0; itemI < _items.size(); ++itemI)
     {
-        if (&(_items[itemI]) != NULL)
+        string name = _items.get_name(itemI);
+        if (_items.is_read(name))
         {
-            delete &(_items[itemI]);
+            ObjCont* objContP = &(_items[itemI]);
+            if (objContP != NULL)
+            {
+                delete (objContP);
+            }
         }
     }
 
@@ -465,9 +470,14 @@ DictObjCont::~DictObjCont()
 
     for (unsigned int subCatI = 0; subCatI < _subcategories.size(); ++subCatI)
     {
-        if (&(_subcategories[subCatI]) != NULL)
+        string name = _subcategories.get_name(subCatI);
+        if (_subcategories.is_read(name))
         {
-            delete &(_subcategories[subCatI]);
+            ObjCont* objContP = &(_subcategories[subCatI]);
+            if (objContP != NULL)
+            {
+                delete (objContP);
+            }
         }
     }
 
@@ -475,9 +485,14 @@ DictObjCont::~DictObjCont()
 
     for (unsigned int catI = 0; catI < _categories.size(); ++catI)
     {
-        if (&(_categories[catI]) != NULL)
+        string name = _categories.get_name(catI);
+        if (_categories.is_read(name))
         {
-            delete &(_categories[catI]);
+            ObjCont* objContP = &(_categories[catI]);
+            if (objContP != NULL)
+            {
+                delete (objContP);
+            }
         }
     }
 
