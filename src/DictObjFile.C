@@ -75,7 +75,18 @@ DictObjFile::~DictObjFile()
     if (!_dictionaries.empty())
     {
       for (unsigned int j = 0; j < _dictionaries.size(); ++j)
-        delete(&(_dictionaries[j]));
+      {
+        string name = _dictionaries.get_name(j);
+        if (_dictionaries.is_read(name))
+        {
+            DictObjCont* dictObjContP = &(_dictionaries[j]);
+            if (dictObjContP != NULL)
+            {
+                delete (dictObjContP);
+            }
+        }
+      }
+
       _dictionaries.clear();
     }
 
