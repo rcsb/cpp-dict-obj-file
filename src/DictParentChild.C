@@ -43,6 +43,11 @@ DictParentChild::DictParentChild(const DictObjCont& dictObjCont,
 
     // Now create relations
     CreateAllRelations(*_groupTableP, *_groupListTableP);
+
+    // TRACE
+    // cout << "Tables" << endl;
+    // cout << (*_groupTableP) << endl;
+    // cout << (*_groupListTableP) << endl;
 }
 
 
