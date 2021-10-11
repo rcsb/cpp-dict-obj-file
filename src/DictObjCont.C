@@ -652,7 +652,7 @@ void DictObjCont::PrintContainers(const string& catName,
         {
             objCont.Print();
         }
-        catch (NotFoundException)
+        catch (NotFoundException& exc)
         {
             cout << "Failed to load " << objContInfo._objContInfoDescr <<
               " " << _itemsStore[indexPair.first][indexPair.second][i] <<
